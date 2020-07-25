@@ -3,11 +3,10 @@ using System.Collections.Generic;
 
 namespace DesignPatterns.Business.StrategyPattern.Services
 {
-    public class ReversedStrategy : IStrategy
+    public class ReversedSort : ISort
     {
-        public List<string> Run(object data)
+        public List<string> Sort(List<string> list)
         {
-            var list = (List<string>)data;
             list?.Sort();
             list?.Reverse();
             return list;

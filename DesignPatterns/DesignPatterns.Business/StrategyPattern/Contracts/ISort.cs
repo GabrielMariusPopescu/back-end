@@ -2,8 +2,8 @@
 
 namespace DesignPatterns.Business.StrategyPattern.Contracts
 {
-    public interface IStrategy
+    public interface ISort
     {
-        List<string> Run(object data);
+        List<string> Sort(List<string> list);
     }
 }

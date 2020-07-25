@@ -3,11 +3,10 @@ using System.Collections.Generic;
 
 namespace DesignPatterns.Business.StrategyPattern.Services
 {
-    public class SortedStrategy : IStrategy
+    public class SortedSort : ISort
     {
-        public List<string> Run(object data)
+        public List<string> Sort(List<string> list)
         {
-            var list = (List<string>)data;
             list?.Sort();
             return list;
         }

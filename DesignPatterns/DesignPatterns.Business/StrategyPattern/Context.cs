@@ -5,18 +5,25 @@ namespace DesignPatterns.Business.StrategyPattern
 {
     public class Context
     {
-        public Context(IStrategy strategy)
+        public Context(ISort sort, IDisplay display)
         {
-            this.strategy = strategy;
+            this.sort = sort;
+            this.display = display;
         }
 
-        public List<string> Execute(List<string> list)
+        public List<string> Sort(List<string> list)
         {
-            return strategy.Run(list);
+            return sort.Sort(list);
+        }
+
+        public List<string> Display(List<string> list)
+        {
+            return display.Display(list);
         }
 
         //
 
-        private readonly IStrategy strategy;
+        private readonly ISort sort;
+        private readonly IDisplay display;
     }
 }
