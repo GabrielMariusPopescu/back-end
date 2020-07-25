@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Feeder.UI", "Feeder.UI\Feeder.UI.csproj", "{AA86AB46-A30D-4966-BB2F-08BD498F42FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Feeder.BLL", "Feeder.BLL\Feeder.BLL.csproj", "{8B959B57-DE05-473D-9171-EDC61E1054E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Feeder.DAL", "Feeder.DAL\Feeder.DAL.csproj", "{C0FB42B8-DE28-4F6A-BBDD-DD5E2C2690AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA86AB46-A30D-4966-BB2F-08BD498F42FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA86AB46-A30D-4966-BB2F-08BD498F42FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA86AB46-A30D-4966-BB2F-08BD498F42FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA86AB46-A30D-4966-BB2F-08BD498F42FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B959B57-DE05-473D-9171-EDC61E1054E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B959B57-DE05-473D-9171-EDC61E1054E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B959B57-DE05-473D-9171-EDC61E1054E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B959B57-DE05-473D-9171-EDC61E1054E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0FB42B8-DE28-4F6A-BBDD-DD5E2C2690AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0FB42B8-DE28-4F6A-BBDD-DD5E2C2690AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0FB42B8-DE28-4F6A-BBDD-DD5E2C2690AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0FB42B8-DE28-4F6A-BBDD-DD5E2C2690AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E73987E-B06B-4F3C-8748-5BF7A38AD78B}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,12 @@
+Find Methods
+============
+
+REQUIRMENTS:
+- create a program that will list all the methods from LS.Common and add different colors depending on XML comments (existing / non-existing)
+
+OBSOLETE TODO's:
+x read all .cs files within all projects within the LS.Common solution
+x create a list of definitions that will contain a definition type and a line (DefinitionType can be Project, Title, XmlComments or Methods)
+- make an object out of each Project
+x color green all methods that have xml comments above
+x color red all methods that haven't xml comments above

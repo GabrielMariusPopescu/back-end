@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForTests.UI", "ForTests.UI\ForTests.UI.csproj", "{89E5D00C-2E4E-4CAA-90BE-8563B9979A53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForTests.BL", "ForTests.BL\ForTests.BL.csproj", "{4B191CF8-049A-489E-8E32-5648BB0B249A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89E5D00C-2E4E-4CAA-90BE-8563B9979A53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89E5D00C-2E4E-4CAA-90BE-8563B9979A53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89E5D00C-2E4E-4CAA-90BE-8563B9979A53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89E5D00C-2E4E-4CAA-90BE-8563B9979A53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B191CF8-049A-489E-8E32-5648BB0B249A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B191CF8-049A-489E-8E32-5648BB0B249A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B191CF8-049A-489E-8E32-5648BB0B249A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B191CF8-049A-489E-8E32-5648BB0B249A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
