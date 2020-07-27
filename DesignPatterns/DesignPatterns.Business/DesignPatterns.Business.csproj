@@ -41,12 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DecoratorPattern\Services\Beverage.cs" />
-    <Compile Include="DecoratorPattern\Services\CaramelDecorator.cs" />
-    <Compile Include="DecoratorPattern\Services\CondimentDecorator.cs" />
-    <Compile Include="DecoratorPattern\Services\Decaf.cs" />
-    <Compile Include="DecoratorPattern\Services\Espresso.cs" />
-    <Compile Include="DecoratorPattern\Services\SoyDecorator.cs" />
+    <Compile Include="DecoratorPattern\Beverage\Decaf.cs" />
+    <Compile Include="DecoratorPattern\Beverage\Drink.cs" />
+    <Compile Include="DecoratorPattern\Beverage\Espresso.cs" />
+    <Compile Include="DecoratorPattern\Decorator\Caramel.cs" />
+    <Compile Include="DecoratorPattern\Decorator\Flavour.cs" />
+    <Compile Include="DecoratorPattern\Decorator\Soy.cs" />
     <Compile Include="ObserverPattern\Contracts\IWeather.cs" />
     <Compile Include="ObserverPattern\Contracts\ISubscriber.cs" />
     <Compile Include="ObserverPattern\Services\AustralianSubscriber.cs" />
@@ -67,8 +67,6 @@
     <Content Include="ObserverPattern\NOTES.txt" />
     <Content Include="StrategyPattern\NOTES.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DecoratorPattern\Contracts\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
