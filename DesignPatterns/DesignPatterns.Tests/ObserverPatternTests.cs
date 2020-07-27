@@ -11,94 +11,82 @@ namespace DesignPatterns.Tests
         [SetUp]
         public void Init()
         {
-            australianSubscriber = new AustralianSubscriber();
-            romanianSubscriber = new RomanianSubscriber();
-            unitedKingdomSubscriber = new UnitedKingdomSubscriber();
+            var subscribers = new List<ISubscriber> { australianSubscriber, romanianSubscriber, unitedKingdomSubscriber };
+            weather = new Weather(subscribers);
+            australianSubscriber = new AustralianSubscriber(weather);
+            romanianSubscriber = new RomanianSubscriber(weather);
+            unitedKingdomSubscriber = new UnitedKingdomSubscriber(weather);
         }
 
         [Test]
-        public void AustraliaSubscribe()
+        public void EverybodySubscribed()
         {
-            IWeather weather = new Weather(new List<ISubscriber> { australianSubscriber });
             weather.Subscribe(australianSubscriber);
             Assert.AreEqual("Australian subscriber", australianSubscriber.Name);
             Assert.AreEqual("Australian subscriber subscribed!", weather.Message);
-        }
-
-        [Test]
-        public void RomaniaSubscribe()
-        {
-            IWeather weather = new Weather(new List<ISubscriber> { romanianSubscriber });
             weather.Subscribe(romanianSubscriber);
             Assert.AreEqual("Romanian subscriber", romanianSubscriber.Name);
             Assert.AreEqual("Romanian subscriber subscribed!", weather.Message);
-        }
-
-        [Test]
-        public void UnitedKingdomSubscribe()
-        {
-            IWeather weather = new Weather(new List<ISubscriber> { unitedKingdomSubscriber });
             weather.Subscribe(unitedKingdomSubscriber);
             Assert.AreEqual("United Kingdom subscriber", unitedKingdomSubscriber.Name);
             Assert.AreEqual("United Kingdom subscriber subscribed!", weather.Message);
         }
 
         [Test]
-        public void AustraliaUnsubscribe()
+        public void EverybodyUnsubscribed()
         {
-            IWeather weather = new Weather(new List<ISubscriber> { australianSubscriber });
             weather.Unsubscribe(australianSubscriber);
             Assert.AreEqual("Australian subscriber", australianSubscriber.Name);
             Assert.AreEqual("Australian subscriber unsubscribed!", weather.Message);
-        }
-
-        [Test]
-        public void RomaniaUnsubscribe()
-        {
-            IWeather weather = new Weather(new List<ISubscriber> { romanianSubscriber });
             weather.Unsubscribe(romanianSubscriber);
             Assert.AreEqual("Romanian subscriber", romanianSubscriber.Name);
             Assert.AreEqual("Romanian subscriber unsubscribed!", weather.Message);
-        }
-
-        [Test]
-        public void UnitedKingdomUnsubscribe()
-        {
-            IWeather weather = new Weather(new List<ISubscriber> { unitedKingdomSubscriber });
             weather.Unsubscribe(unitedKingdomSubscriber);
             Assert.AreEqual("United Kingdom subscriber", unitedKingdomSubscriber.Name);
             Assert.AreEqual("United Kingdom subscriber unsubscribed!", weather.Message);
         }
 
         [Test]
-        public void AustralianWeatherNotify()
+        public void AustralianSubscriberIsNotified()
         {
-            IWeather weather = new Weather(new List<ISubscriber> { australianSubscriber });
+            weather.Subscribe(australianSubscriber);
             weather.Degree = 40;
             weather.Notify();
             Assert.AreEqual("It's normal out here!", australianSubscriber.Message);
         }
 
         [Test]
-        public void RomanianWeatherNotify()
+        public void RomanianSubscriberIsNotified()
         {
-            IWeather weather = new Weather(new List<ISubscriber> { romanianSubscriber });
+            weather.Subscribe(romanianSubscriber);
             weather.Degree = -10;
             weather.Notify();
             Assert.AreEqual("It's freezing!", romanianSubscriber.Message);
         }
 
         [Test]
-        public void UnitedKingdomWeatherNotify()
+        public void EnglishSubscriberIsNotified()
         {
-            IWeather weather = new Weather(new List<ISubscriber> { unitedKingdomSubscriber });
+            weather.Subscribe(unitedKingdomSubscriber);
             weather.Degree = 250;
             weather.Notify();
             Assert.AreEqual("It's roasting!", unitedKingdomSubscriber.Message);
         }
 
+        [Test]
+        public void AustralianAndEnglishSubscribersAreNotified()
+        {
+            weather.Subscribe(unitedKingdomSubscriber);
+            weather.Subscribe(australianSubscriber);
+            weather.Degree = 40;
+            weather.Notify();
+            Assert.AreEqual("It's roasting!", unitedKingdomSubscriber.Message);
+            Assert.AreEqual("It's normal out here!", australianSubscriber.Message);
+        }
+
         //
 
+        private IWeather weather;
         private ISubscriber australianSubscriber;
         private ISubscriber romanianSubscriber;
         private ISubscriber unitedKingdomSubscriber;

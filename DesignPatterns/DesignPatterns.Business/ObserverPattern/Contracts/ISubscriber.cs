@@ -6,6 +6,6 @@
 
         string Message { get; }
 
-        void Update(IWeather weather);
+        void Update();
     }
 }

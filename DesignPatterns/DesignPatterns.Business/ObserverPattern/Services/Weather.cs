@@ -1,5 +1,6 @@
 ﻿using DesignPatterns.Business.ObserverPattern.Contracts;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DesignPatterns.Business.ObserverPattern.Services
 {
@@ -28,7 +29,8 @@ namespace DesignPatterns.Business.ObserverPattern.Services
 
         public void Notify()
         {
-            observers.ForEach(observer => observer.Update(this));
+            foreach (var observer in observers.Where(observer => observer != null))
+                observer.Update();
         }
 
         //
