@@ -6,7 +6,9 @@ namespace DesignPatterns.Business.DecoratorPattern.Decorator
     {
         protected Flavour(Drink drink) => this.drink = drink;
 
-        public override string GetDescription() => $"{drink.GetDescription()} flavoured";
+        public override string GetDescription() => string.Empty;
+
+        public override double GetCost() => 0.0;
 
         //
 
