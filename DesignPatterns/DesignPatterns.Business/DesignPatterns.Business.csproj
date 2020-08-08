@@ -41,6 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractFactoryPattern\Contracts\IFurnitureFactory.cs" />
+    <Compile Include="AbstractFactoryPattern\Contracts\IModernFurniture.cs" />
+    <Compile Include="AbstractFactoryPattern\Contracts\IVictorianFurniture.cs" />
+    <Compile Include="AbstractFactoryPattern\Models\ModernChair.cs" />
+    <Compile Include="AbstractFactoryPattern\Models\ModernCoffeeTable.cs" />
+    <Compile Include="AbstractFactoryPattern\Models\VictorianChair.cs" />
+    <Compile Include="AbstractFactoryPattern\Models\VictorianCoffeeTable.cs" />
+    <Compile Include="AbstractFactoryPattern\Services\ChairFurnitureFactory.cs" />
+    <Compile Include="AbstractFactoryPattern\Services\CoffeeTableFurnitureFactory.cs" />
     <Compile Include="DecoratorPattern\Beverage\Decaf.cs" />
     <Compile Include="DecoratorPattern\Beverage\Drink.cs" />
     <Compile Include="DecoratorPattern\Beverage\Espresso.cs" />
@@ -69,6 +78,7 @@
     <Compile Include="StrategyPattern\Services\UppercaseDisplay.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AbstractFactoryPattern\NOTES.txt" />
     <Content Include="DecoratorPattern\NOTES.txt" />
     <Content Include="FactoryPattern\NOTES.txt" />
     <Content Include="ObserverPattern\NOTES.txt" />

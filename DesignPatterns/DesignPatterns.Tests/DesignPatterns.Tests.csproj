@@ -46,6 +46,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractFactoryPatternTests.cs" />
     <Compile Include="DecoratorPatternTests.cs" />
     <Compile Include="FactoryPatternTests.cs" />
     <Compile Include="ObserverPatternTests.cs" />
