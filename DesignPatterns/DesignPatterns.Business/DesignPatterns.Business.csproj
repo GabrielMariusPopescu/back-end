@@ -64,9 +64,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DecoratorPattern\NOTES.txt" />
+    <Content Include="FactoryPattern\NOTES.txt" />
     <Content Include="ObserverPattern\NOTES.txt" />
     <Content Include="StrategyPattern\NOTES.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="FactoryPattern\Contracts\" />
+    <Folder Include="FactoryPattern\Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
