@@ -7,113 +7,106 @@ namespace DesignPatterns.Tests
     [TestFixture]
     public class DecoratorPatternTests
     {
-        [SetUp]
-        public void Init()
-        {
-            espresso = new Espresso();
-            decaf = new Decaf();
-
-            espressoWithCaramel = new Caramel(espresso);
-            espressoWithSoy = new Soy(espresso);
-            decafWithCaramel = new Caramel(decaf);
-            decafWithSoy = new Soy(decaf);
-
-            combinedCaramelWithSoyEspresso = new Caramel(new Soy(espresso));
-            combinedSoyWithCaramelDecaf = new Soy(new Caramel(decaf));
-        }
-
         [Test]
         public void DrinkAsEspresso()
         {
-            var description = espresso.GetDescription();
+            Drink drink = new Espresso();
+
+            var description = drink.GetDescription();
+            var cost = drink.GetCost();
+
             Assert.AreEqual("espresso", description);
-
-            var cost = espresso.GetCost();
             Assert.AreEqual(3.50, cost);
-
         }
 
         [Test]
         public void DrinkAsDecaf()
         {
-            var description = decaf.GetDescription();
-            Assert.AreEqual("decaf", description);
+            Drink drink = new Decaf();
 
-            var cost = decaf.GetCost();
+            var description = drink.GetDescription();
+            var cost = drink.GetCost();
+
+            Assert.AreEqual("decaf", description);
             Assert.AreEqual(2.00, cost);
         }
 
         [Test]
         public void EspressoWithCaramel()
         {
-            var description = espressoWithCaramel.GetDescription();
-            Assert.AreEqual("espresso with caramel flavour", description);
+            Drink drink = new Espresso();
+            Flavour flavour = new Caramel(drink);
 
-            var cost = espressoWithCaramel.GetCost();
+            var description = flavour.GetDescription();
+            var cost = flavour.GetCost();
+
+            Assert.AreEqual("espresso with caramel flavour", description);
             Assert.AreEqual(5.50, cost);
         }
 
         [Test]
         public void EspressoWithSoy()
         {
-            var description = espressoWithSoy.GetDescription();
-            Assert.AreEqual("espresso with soy flavour", description);
+            Drink drink = new Espresso();
+            Flavour flavour = new Soy(drink);
 
-            var cost = espressoWithSoy.GetCost();
+            var description = flavour.GetDescription();
+            var cost = flavour.GetCost();
+
+            Assert.AreEqual("espresso with soy flavour", description);
             Assert.AreEqual(7.50, cost);
         }
 
         [Test]
         public void DecafWithCaramel()
         {
-            var description = decafWithCaramel.GetDescription();
-            Assert.AreEqual("decaf with caramel flavour", description);
+            Drink drink = new Decaf();
+            Flavour flavour = new Caramel(drink);
 
-            var cost = decafWithCaramel.GetCost();
+            var description = flavour.GetDescription();
+            var cost = flavour.GetCost();
+
+            Assert.AreEqual("decaf with caramel flavour", description);
             Assert.AreEqual(4.00, cost);
         }
 
         [Test]
         public void DecafWithSoy()
         {
-            var description = decafWithSoy.GetDescription();
-            Assert.AreEqual("decaf with soy flavour", description);
+            Drink drink = new Decaf();
+            Flavour flavour = new Soy(drink);
 
-            var cost = decafWithSoy.GetCost();
+            var description = flavour.GetDescription();
+            var cost = flavour.GetCost();
+
+            Assert.AreEqual("decaf with soy flavour", description);
             Assert.AreEqual(6.00, cost);
         }
 
         [Test]
         public void AddCaramelAndSoyInEspresso()
         {
-            var description = combinedCaramelWithSoyEspresso.GetDescription();
-            Assert.AreEqual("espresso with soy flavour with caramel flavour", description);
+            Drink drink = new Espresso();
+            Flavour flavour = new Caramel(new Soy(drink));
 
-            var cost = combinedCaramelWithSoyEspresso.GetCost();
+            var description = flavour.GetDescription();
+            var cost = flavour.GetCost();
+
+            Assert.AreEqual("espresso with soy flavour with caramel flavour", description);
             Assert.AreEqual(9.50, cost);
         }
 
         [Test]
         public void AddSoyAndCaramelInDecaf()
         {
-            var description = combinedSoyWithCaramelDecaf.GetDescription();
+            Drink drink = new Decaf();
+            Flavour flavour = new Soy(new Caramel(drink));
+
+            var description = flavour.GetDescription();
             Assert.AreEqual("decaf with caramel flavour with soy flavour", description);
 
-            var cost = combinedSoyWithCaramelDecaf.GetCost();
+            var cost = flavour.GetCost();
             Assert.AreEqual(8.00, cost);
         }
-
-        //
-
-        private Drink espresso;
-        private Drink decaf;
-
-        private Flavour espressoWithCaramel;
-        private Flavour espressoWithSoy;
-        private Flavour decafWithCaramel;
-        private Flavour decafWithSoy;
-
-        private Flavour combinedCaramelWithSoyEspresso;
-        private Flavour combinedSoyWithCaramelDecaf;
     }
 }

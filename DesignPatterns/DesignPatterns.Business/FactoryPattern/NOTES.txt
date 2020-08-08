@@ -8,5 +8,5 @@ There are three version of this pattern
 2. Factory Method
    --------------
    defines a contract for creating an object,
-   but lets subclasses to decide with class to instantite.
+   but lets subclasses to decide with class to instantiate.
    Factory method lets a class deffer instantiation to subclasses.

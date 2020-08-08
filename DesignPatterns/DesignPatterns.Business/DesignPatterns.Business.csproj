@@ -47,6 +47,12 @@
     <Compile Include="DecoratorPattern\Decorator\Caramel.cs" />
     <Compile Include="DecoratorPattern\Decorator\Flavour.cs" />
     <Compile Include="DecoratorPattern\Decorator\Soy.cs" />
+    <Compile Include="FactoryPattern\Contracts\ILogistics.cs" />
+    <Compile Include="FactoryPattern\Contracts\ITransport.cs" />
+    <Compile Include="FactoryPattern\Models\Ship.cs" />
+    <Compile Include="FactoryPattern\Models\Truck.cs" />
+    <Compile Include="FactoryPattern\Services\RoadLogistics.cs" />
+    <Compile Include="FactoryPattern\Services\SeaLogistics.cs" />
     <Compile Include="ObserverPattern\Contracts\IWeather.cs" />
     <Compile Include="ObserverPattern\Contracts\ISubscriber.cs" />
     <Compile Include="ObserverPattern\Services\AustralianSubscriber.cs" />
@@ -68,9 +74,6 @@
     <Content Include="ObserverPattern\NOTES.txt" />
     <Content Include="StrategyPattern\NOTES.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="FactoryPattern\Contracts\" />
-    <Folder Include="FactoryPattern\Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DecoratorPatternTests.cs" />
+    <Compile Include="FactoryPatternTests.cs" />
     <Compile Include="ObserverPatternTests.cs" />
     <Compile Include="StrategyPatternTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
