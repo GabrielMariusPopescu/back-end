@@ -1,4 +1,5 @@
-﻿using DesignPatterns.Business.CommandPattern.Contracts;
+﻿using DesignPatterns.Business.CommandPattern;
+using DesignPatterns.Business.CommandPattern.Contracts;
 using DesignPatterns.Business.CommandPattern.Models;
 using DesignPatterns.Business.CommandPattern.Services;
 using NUnit.Framework;
@@ -12,18 +13,21 @@ namespace DesignPatterns.Tests
         public void Init()
         {
             light = new Light();
+            ICommand onCommand = new TurnOnCommand(light);
+            ICommand offCommand = new TurnOffCommand(light);
+            ICommand dimCommand = new DimCommand(light);
+            ICommand brightCommand = new BrightCommand(light);
+            invoker = new RemoteControl(onCommand, offCommand, dimCommand, brightCommand);
         }
 
         [Test]
         public void TurnOnCommandInvoked()
         {
-            command = new TurnOnCommand(light);
-
-            command.Do();
+            invoker.ClickOn();
 
             Assert.AreEqual("Light is turned on.", light.State);
 
-            command.Undo();
+            invoker.UndoClickOn();
 
             Assert.AreEqual("Light is turned off.", light.State);
         }
@@ -31,13 +35,11 @@ namespace DesignPatterns.Tests
         [Test]
         public void TurnOffCommandInvoked()
         {
-            command = new TurnOffCommand(light);
-
-            command.Do();
+            invoker.ClickOff();
 
             Assert.AreEqual("Light is turned off.", light.State);
 
-            command.Undo();
+            invoker.UndoClickOff();
 
             Assert.AreEqual("Light is turned on.", light.State);
         }
@@ -45,13 +47,11 @@ namespace DesignPatterns.Tests
         [Test]
         public void DimCommandInvoked()
         {
-            command = new DimCommand(light);
-
-            command.Do();
+            invoker.ClickDim();
 
             Assert.AreEqual("Light is dimmed.", light.State);
 
-            command.Undo();
+            invoker.UndoClickDim();
 
             Assert.AreEqual("Light is brighter.", light.State);
         }
@@ -59,13 +59,11 @@ namespace DesignPatterns.Tests
         [Test]
         public void BrightCommandInvoked()
         {
-            command = new BrightCommand(light);
-
-            command.Do();
+            invoker.ClickBright();
 
             Assert.AreEqual("Light is brighter.", light.State);
 
-            command.Undo();
+            invoker.UndoClickBright();
 
             Assert.AreEqual("Light is dimmed.", light.State);
         }
@@ -73,6 +71,6 @@ namespace DesignPatterns.Tests
         //
 
         private Light light;
-        private ICommand command;
+        private RemoteControl invoker;
     }
 }

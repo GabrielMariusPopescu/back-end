@@ -53,6 +53,7 @@
     <Compile Include="AbstractFactoryPattern\Services\ChairFurnitureFactory.cs" />
     <Compile Include="AbstractFactoryPattern\Services\CoffeeTableFurnitureFactory.cs" />
     <Compile Include="CommandPattern\Contracts\ICommand.cs" />
+    <Compile Include="CommandPattern\RemoteControl.cs" />
     <Compile Include="CommandPattern\Models\Light.cs" />
     <Compile Include="CommandPattern\Services\BrightCommand.cs" />
     <Compile Include="CommandPattern\Services\DimCommand.cs" />
