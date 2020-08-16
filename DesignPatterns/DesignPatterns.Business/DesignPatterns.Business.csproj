@@ -52,6 +52,9 @@
     <Compile Include="AbstractFactoryPattern\Models\VictorianCoffeeTable.cs" />
     <Compile Include="AbstractFactoryPattern\Services\ChairFurnitureFactory.cs" />
     <Compile Include="AbstractFactoryPattern\Services\CoffeeTableFurnitureFactory.cs" />
+    <Compile Include="AdapterPattern\Adaptee.cs" />
+    <Compile Include="AdapterPattern\Contracts\IAdapter.cs" />
+    <Compile Include="AdapterPattern\Services\Adapter.cs" />
     <Compile Include="CommandPattern\Contracts\ICommand.cs" />
     <Compile Include="CommandPattern\RemoteControl.cs" />
     <Compile Include="CommandPattern\Models\Light.cs" />
@@ -88,12 +91,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AbstractFactoryPattern\NOTES.txt" />
+    <Content Include="AdapterPattern\NOTES.txt" />
     <Content Include="CommandPattern\NOTES.txt" />
     <Content Include="DecoratorPattern\NOTES.txt" />
     <Content Include="FactoryPattern\NOTES.txt" />
     <Content Include="ObserverPattern\NOTES.txt" />
     <Content Include="StrategyPattern\NOTES.txt" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

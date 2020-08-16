@@ -2,7 +2,7 @@
 {
     public class Light
     {
-        public string State { get; set; }
+        public string State { get; private set; }
 
         public void TurnOn() => State = "Light is turned on.";
 
