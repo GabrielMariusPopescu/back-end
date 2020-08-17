@@ -17,8 +17,8 @@ namespace DesignPatterns.Tests
         {
             facade.Convert<AudioMixer>();
 
-            Assert.AreEqual("AudioMixer", facade.VideoFormat);
-            Assert.AreEqual("AudioMixer has been converted with the filename AudioMixer", facade.Result);
+            Assert.AreEqual("AudioMixer", facade.Format);
+            Assert.AreEqual("AudioMixer has been converted with the filename AudioMixer", facade.Name);
         }
 
         [Test]
@@ -26,8 +26,8 @@ namespace DesignPatterns.Tests
         {
             facade.Convert<BitrateReader>();
 
-            Assert.AreEqual("BitrateReader", facade.VideoFormat);
-            Assert.AreEqual("BitrateReader has been converted with the filename BitrateReader", facade.Result);
+            Assert.AreEqual("BitrateReader", facade.Format);
+            Assert.AreEqual("BitrateReader has been converted with the filename BitrateReader", facade.Name);
         }
 
         [Test]
@@ -35,8 +35,8 @@ namespace DesignPatterns.Tests
         {
             facade.Convert<CodecFactory>();
 
-            Assert.AreEqual("CodecFactory", facade.VideoFormat);
-            Assert.AreEqual("CodecFactory has been converted with the filename CodecFactory", facade.Result);
+            Assert.AreEqual("CodecFactory", facade.Format);
+            Assert.AreEqual("CodecFactory has been converted with the filename CodecFactory", facade.Name);
         }
 
         [Test]
@@ -44,8 +44,8 @@ namespace DesignPatterns.Tests
         {
             facade.Convert<Mpeg4CompressionCodec>();
 
-            Assert.AreEqual("Mpeg4CompressionCodec", facade.VideoFormat);
-            Assert.AreEqual("Mpeg4CompressionCodec has been converted with the filename Mpeg4CompressionCodec", facade.Result);
+            Assert.AreEqual("Mpeg4CompressionCodec", facade.Format);
+            Assert.AreEqual("Mpeg4CompressionCodec has been converted with the filename Mpeg4CompressionCodec", facade.Name);
         }
 
         [Test]
@@ -53,8 +53,8 @@ namespace DesignPatterns.Tests
         {
             facade.Convert<OggCompressionCodec>();
 
-            Assert.AreEqual("OggCompressionCodec", facade.VideoFormat);
-            Assert.AreEqual("OggCompressionCodec has been converted with the filename OggCompressionCodec", facade.Result);
+            Assert.AreEqual("OggCompressionCodec", facade.Format);
+            Assert.AreEqual("OggCompressionCodec has been converted with the filename OggCompressionCodec", facade.Name);
         }
 
         [Test]
@@ -62,8 +62,8 @@ namespace DesignPatterns.Tests
         {
             facade.Convert<VideoFile>();
 
-            Assert.AreEqual("VideoFile", facade.VideoFormat);
-            Assert.AreEqual("VideoFile has been converted with the filename VideoFile", facade.Result);
+            Assert.AreEqual("VideoFile", facade.Format);
+            Assert.AreEqual("VideoFile has been converted with the filename VideoFile", facade.Name);
         }
 
         //
