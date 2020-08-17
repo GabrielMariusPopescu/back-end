@@ -50,6 +50,7 @@
     <Compile Include="AdapterPatternTests.cs" />
     <Compile Include="CommandPatternTests.cs" />
     <Compile Include="DecoratorPatternTests.cs" />
+    <Compile Include="FacadePatternTests.cs" />
     <Compile Include="FactoryPatternTests.cs" />
     <Compile Include="ObserverPatternTests.cs" />
     <Compile Include="StrategyPatternTests.cs" />

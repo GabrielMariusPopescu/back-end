@@ -68,6 +68,13 @@
     <Compile Include="DecoratorPattern\Decorator\Caramel.cs" />
     <Compile Include="DecoratorPattern\Decorator\Flavour.cs" />
     <Compile Include="DecoratorPattern\Decorator\Soy.cs" />
+    <Compile Include="FacadePattern\AudioMixer.cs" />
+    <Compile Include="FacadePattern\BitrateReader.cs" />
+    <Compile Include="FacadePattern\CodecFactory.cs" />
+    <Compile Include="FacadePattern\Converter.cs" />
+    <Compile Include="FacadePattern\Mpeg4CompressionCodec.cs" />
+    <Compile Include="FacadePattern\OggCompressionCodec.cs" />
+    <Compile Include="FacadePattern\VideoFile.cs" />
     <Compile Include="FactoryPattern\Contracts\ILogistics.cs" />
     <Compile Include="FactoryPattern\Contracts\ITransport.cs" />
     <Compile Include="FactoryPattern\Models\Ship.cs" />
@@ -94,9 +101,11 @@
     <Content Include="AdapterPattern\NOTES.txt" />
     <Content Include="CommandPattern\NOTES.txt" />
     <Content Include="DecoratorPattern\NOTES.txt" />
+    <Content Include="FacadePattern\NOTES.txt" />
     <Content Include="FactoryPattern\NOTES.txt" />
     <Content Include="ObserverPattern\NOTES.txt" />
     <Content Include="StrategyPattern\NOTES.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
