@@ -88,6 +88,10 @@
     <Compile Include="ObserverPattern\Services\RomanianSubscriber.cs" />
     <Compile Include="ObserverPattern\Services\UnitedKingdomSubscriber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProxyPattern\Contracts\ISharedFolder.cs" />
+    <Compile Include="ProxyPattern\Implementation\SharedFolder.cs" />
+    <Compile Include="ProxyPattern\Implementation\SharedFolderProxy.cs" />
+    <Compile Include="ProxyPattern\Models\Employee.cs" />
     <Compile Include="StrategyPattern\Contracts\IDisplay.cs" />
     <Compile Include="StrategyPattern\Contracts\ISort.cs" />
     <Compile Include="StrategyPattern\Context.cs" />
@@ -104,8 +108,14 @@
     <Content Include="FacadePattern\NOTES.txt" />
     <Content Include="FactoryPattern\NOTES.txt" />
     <Content Include="ObserverPattern\NOTES.txt" />
+    <Content Include="ProxyPattern\NOTES.txt" />
     <Content Include="StrategyPattern\NOTES.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ProxyPattern\Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
