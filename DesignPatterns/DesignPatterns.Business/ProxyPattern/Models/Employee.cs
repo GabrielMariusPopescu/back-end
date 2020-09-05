@@ -1,15 +1,17 @@
-﻿namespace DesignPatterns.Business.ProxyPattern.Models
+﻿using DesignPatterns.Business.ProxyPattern.Enums;
+
+namespace DesignPatterns.Business.ProxyPattern.Models
 {
     public class Employee
     {
         public string Username { get; }
 
-        public string Role { get; }
+        public RoleType RoleType { get; }
 
-        public Employee(string username, string role)
+        public Employee(string username, RoleType roleType)
         {
             Username = username;
-            Role = role;
+            RoleType = roleType;
         }
     }
 }

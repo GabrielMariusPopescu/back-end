@@ -1,5 +1,6 @@
 ﻿using DesignPatterns.Business.AdapterPattern.Contracts;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DesignPatterns.Business.AdapterPattern.Services
 {
@@ -9,13 +10,8 @@ namespace DesignPatterns.Business.AdapterPattern.Services
 
         public List<string> GetEmployees()
         {
-            var employeeList = new List<string>();
             var employees = adaptee.GetEmployees();
-
-            foreach (var employee in employees)
-                employeeList.AddRange(employee);
-
-            return employeeList;
+            return employees.SelectMany(employee => employee).ToList();
         }
 
         //

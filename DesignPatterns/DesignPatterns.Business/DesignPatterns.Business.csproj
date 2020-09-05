@@ -55,6 +55,14 @@
     <Compile Include="AdapterPattern\Adaptee.cs" />
     <Compile Include="AdapterPattern\Contracts\IAdapter.cs" />
     <Compile Include="AdapterPattern\Services\Adapter.cs" />
+    <Compile Include="BridgePattern\Contracts\IResource.cs" />
+    <Compile Include="BridgePattern\Contracts\View.cs" />
+    <Compile Include="BridgePattern\Implementation\ArtistResource.cs" />
+    <Compile Include="BridgePattern\Implementation\BookResource.cs" />
+    <Compile Include="BridgePattern\Implementation\LongView.cs" />
+    <Compile Include="BridgePattern\Implementation\ShortView.cs" />
+    <Compile Include="BridgePattern\Models\Artist.cs" />
+    <Compile Include="BridgePattern\Models\Book.cs" />
     <Compile Include="CommandPattern\Contracts\ICommand.cs" />
     <Compile Include="CommandPattern\RemoteControl.cs" />
     <Compile Include="CommandPattern\Models\Light.cs" />
@@ -89,6 +97,7 @@
     <Compile Include="ObserverPattern\Services\UnitedKingdomSubscriber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProxyPattern\Contracts\ISharedFolder.cs" />
+    <Compile Include="ProxyPattern\Enums\RoleType.cs" />
     <Compile Include="ProxyPattern\Implementation\SharedFolder.cs" />
     <Compile Include="ProxyPattern\Implementation\SharedFolderProxy.cs" />
     <Compile Include="ProxyPattern\Models\Employee.cs" />
@@ -103,6 +112,7 @@
   <ItemGroup>
     <Content Include="AbstractFactoryPattern\NOTES.txt" />
     <Content Include="AdapterPattern\NOTES.txt" />
+    <Content Include="BridgePattern\NOTES.txt" />
     <Content Include="CommandPattern\NOTES.txt" />
     <Content Include="DecoratorPattern\NOTES.txt" />
     <Content Include="FacadePattern\NOTES.txt" />
@@ -111,9 +121,7 @@
     <Content Include="ProxyPattern\NOTES.txt" />
     <Content Include="StrategyPattern\NOTES.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ProxyPattern\Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>

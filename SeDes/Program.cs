@@ -1,38 +1,46 @@
-﻿using System;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace SeDes
 {
-    class Program
+    public static class Program
     {
-        static void Main(string[] args)
+        private static Rocket[] Rockets { get; set; }
+
+        private static string RocketsJson { get; set; }
+
+        private static void Main()
         {
-            var json = DoSerialization();
-            Console.WriteLine(json);
+            DoSerialization();
             Console.WriteLine("==================================");
-            DoDeserialization(json);
+            DoDeserialization();
         }
 
         // Serialize a Rocket array to JSON string
-        public static string DoSerialization()
+        private static void DoSerialization()
         {
-            Rocket[] rockets = {
-        new Rocket{ Id = 0, Builder = "NASA", Target = "Moon", Speed=7.8},
-        new Rocket{ Id = 1, Builder = "NASA", Target = "Mars", Speed=10.9},
-        new Rocket{ Id = 2, Builder = "NASA", Target = "Kepler-452b", Speed=42.1},
-        new Rocket{ Id = 3, Builder = "NASA", Target = "N/A", Speed=0}
-    };
-            var rocketJson = JsonConvert.SerializeObject(rockets);
-            return rocketJson;
+            Rockets = new[]
+            {
+                new Rocket { Id = 0, Builder = "NASA", Target = "Moon", Speed = 7.8 },
+                new Rocket { Id = 1, Builder = "NASA", Target = "Mars", Speed = 10.9 },
+                new Rocket { Id = 2, Builder = "NASA", Target = "Kepler-452b", Speed = 42.1 },
+                new Rocket { Id = 3, Builder = "NASA", Target = "N/A", Speed = 0 },
+            };
+
+            RocketsJson = JsonConvert.SerializeObject(Rockets);
+            Console.WriteLine(RocketsJson);
         }
 
         // Deserialize a JSON string back to a Rocket array
-        public static void DoDeserialization(string json)
+        private static void DoDeserialization()
         {
-            var ufos = JsonConvert.DeserializeObject<UFO[]>(json);
-            foreach (var ufo in ufos)
+            var rockets = JsonConvert.DeserializeObject<Rocket[]>(RocketsJson);
+            foreach (var rocket in rockets)
             {
-                Console.WriteLine($"Target:{ufo.Target} Speed:{ufo.Speed}");
+                Console.WriteLine($"Id:\t\t{rocket.Id}");
+                Console.WriteLine($"Builder:\t{rocket.Builder}");
+                Console.WriteLine($"Target:\t\t{rocket.Target}");
+                Console.WriteLine($"Speed:\t\t{rocket.Speed}");
             }
         }
     }

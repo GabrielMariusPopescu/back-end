@@ -1,4 +1,5 @@
 ﻿using DesignPatterns.Business.ProxyPattern.Contracts;
+using DesignPatterns.Business.ProxyPattern.Enums;
 using DesignPatterns.Business.ProxyPattern.Models;
 
 namespace DesignPatterns.Business.ProxyPattern.Implementation
@@ -12,7 +13,7 @@ namespace DesignPatterns.Business.ProxyPattern.Implementation
 
         public string PerformReadOperation()
         {
-            if (employee.Role.ToUpper().Equals("CEO") || employee.Role.ToUpper().Equals("MANAGER"))
+            if (employee.RoleType == RoleType.CEO || employee.RoleType == RoleType.MANAGER)
             {
                 folder = new SharedFolder();
                 Message = "Shared folder proxy makes call to the read folder 'Perform read operation' method: ";
@@ -29,7 +30,7 @@ namespace DesignPatterns.Business.ProxyPattern.Implementation
 
         public string PerformWriteOperation()
         {
-            if (employee.Role.ToUpper().Equals("CEO"))
+            if (employee.RoleType == RoleType.CEO)
             {
                 folder = new SharedFolder();
                 Message = "Shared folder proxy makes call to the write folder 'Perform write operation' method: ";

@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="AbstractFactoryPatternTests.cs" />
     <Compile Include="AdapterPatternTests.cs" />
+    <Compile Include="BridgePatternTests.cs" />
     <Compile Include="CommandPatternTests.cs" />
     <Compile Include="DecoratorPatternTests.cs" />
     <Compile Include="FacadePatternTests.cs" />
