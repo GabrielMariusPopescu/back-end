@@ -7,8 +7,8 @@ namespace LightSwitch
 {
     public partial class LightSwitch : Form
     {
-        private const string Path = @"C:\Users\GabyM\Documents\Visual Studio 2015\Projects\back-end-code\LightSwitch\LightSwitch\item\";
-        private readonly SoundPlayer _clickSound = new SoundPlayer(Path + "shortClick.wav");
+        private const string PATH = @"../../item\";
+        private readonly SoundPlayer clickSound = new SoundPlayer(PATH + "shortClick.wav");
 
         public LightSwitch()
         {
@@ -17,7 +17,7 @@ namespace LightSwitch
 
         private void LightSwitch_Load(object sender, EventArgs e)
         {
-            pctBox.Image = Image.FromFile(Path + "light_off.jpg");
+            pctBox.Image = Image.FromFile(PATH + "light_off.jpg");
             btnOn.Enabled = true;
             btnOn.BackColor = Color.White;
             btnOff.Enabled = false;
@@ -26,18 +26,18 @@ namespace LightSwitch
 
         private void btnOn_Click(object sender, EventArgs e)
         {
-            pctBox.Image = Image.FromFile(Path + "light_on.jpg");
+            pctBox.Image = Image.FromFile(PATH + "light_on.jpg");
             btnOn.Enabled = false;
             btnOn.BackColor = Color.Black;
             btnOff.Enabled = true;
             btnOff.BackColor = Color.White;
-            _clickSound.Play();
+            clickSound.Play();
         }
 
         private void btnOff_Click(object sender, EventArgs e)
         {
             LightSwitch_Load(null, null);
-            _clickSound.Play();
+            clickSound.Play();
         }
     }
 }
