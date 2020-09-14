@@ -4,14 +4,17 @@ namespace BethanysPieShop.Models
 {
     public class AppDbContext : DbContext
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-        {
+        public AppDbContext(DbContextOptions<AppDbContext> options)
+            : base(options) { }
 
-        }
         public DbSet<Category> Categories { get; set; }
+
         public DbSet<Pie> Pies { get; set; }
+
         public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
+
         public DbSet<Order> Orders { get; set; }
+
         public DbSet<OrderDetail> OrderDetails { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -24,7 +27,6 @@ namespace BethanysPieShop.Models
             modelBuilder.Entity<Category>().HasData(new Category { CategoryId = 3, CategoryName = "Seasonal pies" });
 
             //seed pies
-
             modelBuilder.Entity<Pie>().HasData(new Pie
             {
                 PieId = 1,

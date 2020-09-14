@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace BethanysPieShop.Models
 {
@@ -18,11 +18,8 @@ namespace BethanysPieShop.Models
         public static ShoppingCart GetCart(IServiceProvider services)
         {
             var session = services.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session;
-
             var context = services.GetService<AppDbContext>();
-
             var cartId = session.GetString("CartId") ?? Guid.NewGuid().ToString();
-
             session.SetString("CartId", cartId);
 
             return new ShoppingCart(context) { ShoppingCartId = cartId };
@@ -97,8 +94,8 @@ namespace BethanysPieShop.Models
         public decimal GetShoppingCartTotal()
         {
             var total = appDbContext.ShoppingCartItems
-                .Where(c => c.ShoppingCartId == ShoppingCartId)
-                .Select(c => c.Pie.Price * c.Amount)
+                .Where(cartItem => cartItem.ShoppingCartId == ShoppingCartId)
+                .Select(cartItem => cartItem.Pie.Price * cartItem.Amount)
                 .Sum();
             return total;
         }
