@@ -15,7 +15,7 @@ namespace FindMethods.WFP
 
     public void LoadSolution()
     {
-      var projects = reader.EnumerateAllDirectories(Constants.LSCOMMON_PATH);
+      var projects = reader.EnumerateAllDirectories(Constants.LS_COMMON_PATH);
       ProjectsNames = reader.GetProjectsNames(projects);
       var files = reader.GetProjectFiles(projects);
       Lines = reader.EnumerateAllLines(ProjectsNames, files);
