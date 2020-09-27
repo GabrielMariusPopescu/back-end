@@ -31,6 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
@@ -108,6 +114,11 @@
     <Compile Include="StrategyPattern\Services\ReversedSort.cs" />
     <Compile Include="StrategyPattern\Services\SortedSort.cs" />
     <Compile Include="StrategyPattern\Services\UppercaseDisplay.cs" />
+    <Compile Include="TemplateMethodPattern\Contracts\IDataMiner.cs" />
+    <Compile Include="TemplateMethodPattern\Implementation\CsvDataMiner.cs" />
+    <Compile Include="TemplateMethodPattern\Implementation\PdfDataMiner.cs" />
+    <Compile Include="TemplateMethodPattern\Models\CSV.cs" />
+    <Compile Include="TemplateMethodPattern\Models\PDF.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AbstractFactoryPattern\NOTES.txt" />
@@ -120,8 +131,13 @@
     <Content Include="ObserverPattern\NOTES.txt" />
     <Content Include="ProxyPattern\NOTES.txt" />
     <Content Include="StrategyPattern\NOTES.txt" />
+    <None Include="packages.config" />
+    <None Include="TemplateMethodPattern\Employees.csv" />
+    <Content Include="TemplateMethodPattern\NOTES.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="TemplateMethodPattern\Employees.pdf" />
+  </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
