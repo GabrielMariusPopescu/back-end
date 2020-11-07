@@ -11,7 +11,7 @@ namespace DesignPatterns
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            var businessLogic = new BusinessLogic();
+            IBusinessLogic businessLogic = new BusinessLogic();
             Application.Run(new MainForm(businessLogic));
         }
     }

@@ -6,7 +6,7 @@ namespace DesignPatterns
 {
     public partial class MainForm : Form
     {
-        public MainForm(BusinessLogic businessLogic)
+        public MainForm(IBusinessLogic businessLogic)
         {
             InitializeComponent();
             this.businessLogic = businessLogic;
@@ -14,11 +14,11 @@ namespace DesignPatterns
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            var strategy = businessLogic.GetPattern();
+            var notes = businessLogic.ReadNotes();
         }
 
         //
 
-        private readonly BusinessLogic businessLogic;
+        private readonly IBusinessLogic businessLogic;
     }
 }

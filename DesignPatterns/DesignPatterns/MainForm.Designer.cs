@@ -28,21 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.mainTlp = new System.Windows.Forms.TableLayoutPanel();
             this.SuspendLayout();
+            // 
+            // mainTlp
+            // 
+            this.mainTlp.ColumnCount = 2;
+            this.mainTlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.mainTlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.mainTlp.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainTlp.Location = new System.Drawing.Point(0, 0);
+            this.mainTlp.Name = "mainTlp";
+            this.mainTlp.RowCount = 2;
+            this.mainTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.mainTlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.mainTlp.Size = new System.Drawing.Size(1870, 887);
+            this.mainTlp.TabIndex = 0;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1870, 887);
+            this.Controls.Add(this.mainTlp);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Design Pattern";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.TableLayoutPanel mainTlp;
     }
 }
 
