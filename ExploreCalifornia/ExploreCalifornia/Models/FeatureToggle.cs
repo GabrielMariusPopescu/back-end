@@ -1,4 +1,4 @@
-﻿namespace ExploreCalifornia
+﻿namespace ExploreCalifornia.Models
 {
     public class FeatureToggle
     {
