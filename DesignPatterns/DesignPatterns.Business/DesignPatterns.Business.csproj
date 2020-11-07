@@ -69,7 +69,6 @@
     <Compile Include="BridgePattern\Implementation\ShortView.cs" />
     <Compile Include="BridgePattern\Models\Artist.cs" />
     <Compile Include="BridgePattern\Models\Book.cs" />
-    <Compile Include="BusinessLogic.cs" />
     <Compile Include="CommandPattern\Contracts\ICommand.cs" />
     <Compile Include="CommandPattern\RemoteControl.cs" />
     <Compile Include="CommandPattern\Models\Light.cs" />
@@ -96,7 +95,6 @@
     <Compile Include="FactoryPattern\Models\Truck.cs" />
     <Compile Include="FactoryPattern\Services\RoadLogistics.cs" />
     <Compile Include="FactoryPattern\Services\SeaLogistics.cs" />
-    <Compile Include="IBusinessLogic.cs" />
     <Compile Include="ObserverPattern\Contracts\IWeather.cs" />
     <Compile Include="ObserverPattern\Contracts\ISubscriber.cs" />
     <Compile Include="ObserverPattern\Services\AustralianSubscriber.cs" />
