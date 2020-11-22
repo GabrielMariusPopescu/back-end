@@ -18,6 +18,15 @@ namespace HackerRank.Tests
         public void RotateLeftOnce()
         {
             var initialArray = new[] { 1, 2, 3, 4, 5 };
+            var expectedArray = new[] { 2, 3, 4, 5, 1 };
+            var actual = leftRotation.Rotate(initialArray, 1);
+            Assert.IsTrue(expectedArray.SequenceEqual(actual));
+        }
+
+        [TestMethod]
+        public void RotateLeftTwice()
+        {
+            var initialArray = new[] { 1, 2, 3, 4, 5 };
             var expectedArray = new[] { 3, 4, 5, 1, 2 };
             var actual = leftRotation.Rotate(initialArray, 2);
             Assert.IsTrue(expectedArray.SequenceEqual(actual));

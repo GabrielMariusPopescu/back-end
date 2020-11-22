@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="LeftRotationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SparseArrayTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
