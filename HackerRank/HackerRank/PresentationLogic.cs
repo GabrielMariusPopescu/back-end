@@ -26,11 +26,11 @@ namespace HackerRank
         {
             var (item1, item2, item3) = tuple;
             Display('-', item1, "Execution of");
-            var initialList = (List<int>)item2;
-            var resultList = (List<int>)item3;
-            initialList?.ForEach(Console.Write);
+            var secondItem = (List<string>) item2;
+            var thirdItem = (List<string>) item3;
+            secondItem?.ForEach(Console.Write);
             Console.WriteLine();
-            resultList?.ForEach(Console.Write);
+            thirdItem?.ForEach(Console.Write);
             Console.WriteLine();
         }
 

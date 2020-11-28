@@ -26,8 +26,8 @@ namespace HackerRank
             if (option == 0)
                 presentationLogic.Display('=', assembly, "Thank you for using");
 
-            var result = businessLogic.Run(option);
-            presentationLogic.Display(result);
+            var tuple = businessLogic.Run(option);
+            presentationLogic.Display(tuple);
 
             presentationLogic.Display('=', assembly, "Thank you for using");
             Environment.Exit(0);
