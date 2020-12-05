@@ -11,7 +11,6 @@ namespace HackerRank.Business.Implementation
         public List<string> Challenges =>
             new List<string>
             {
-                "Exit",
                 "Left Rotation",
                 "Sparse Array",
                 "Balanced Brackets"
