@@ -42,15 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\IArrayManipulation.cs" />
+    <Compile Include="Contracts\IBalancedBrackets.cs" />
     <Compile Include="Contracts\IBusinessLogic.cs" />
     <Compile Include="Contracts\ILeftRotation.cs" />
     <Compile Include="Contracts\ISparseArray.cs" />
     <Compile Include="Implementation\BusinessLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\ArrayManipulation.cs" />
     <Compile Include="Services\LefRotation.cs" />
     <Compile Include="Services\SparseArray.cs" />
+    <Compile Include="Services\BalancedBrackets.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -14,7 +14,7 @@ namespace HackerRank.Business.Implementation
                 "Exit",
                 "Left Rotation",
                 "Sparse Array",
-                "Array Manipulation"
+                "Balanced Brackets"
             };
 
         public Tuple<string, object, object> Run(int option)
@@ -39,8 +39,12 @@ namespace HackerRank.Business.Implementation
                     secondList.AddRange(result.Select(initialResult => $"{initialResult} "));
                     return new Tuple<string, object, object>(Challenges[option], firstList, secondList);
                 case 3:
-                    IArrayManipulation arrayManipulation = new ArrayManipulation();
-
+                    IBalancedBrackets balancedBrackets = new BalancedBrackets();
+                    var brackets = "{[()]}";
+                    firstList.Add(brackets);
+                    var areBalanced = balancedBrackets.AreBalanced(brackets);
+                    secondList.Add(areBalanced);
+                    return new Tuple<string, object, object>(Challenges[option], firstList, secondList);
                 default:
                     return new Tuple<string, object, object>("", "", "");
             }
