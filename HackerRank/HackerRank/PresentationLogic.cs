@@ -26,8 +26,8 @@ namespace HackerRank
         {
             var (item1, item2, item3) = tuple;
             Display('-', item1, "Execution of");
-            var secondItem = (List<string>) item2;
-            var thirdItem = (List<string>) item3;
+            var secondItem = (List<string>)item2;
+            var thirdItem = (List<string>)item3;
             secondItem?.ForEach(Console.Write);
             Console.WriteLine();
             thirdItem?.ForEach(Console.Write);
@@ -48,6 +48,11 @@ namespace HackerRank
         {
             var value = Console.ReadLine();
             return int.TryParse(value, out var option) ? option : 0;
+        }
+
+        public void Exit()
+        {
+            Environment.Exit(0);
         }
     }
 }

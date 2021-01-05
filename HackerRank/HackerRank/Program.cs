@@ -1,6 +1,5 @@
 ﻿using HackerRank.Business.Contracts;
 using HackerRank.Business.Implementation;
-using System;
 
 namespace HackerRank
 {
@@ -24,13 +23,16 @@ namespace HackerRank
             presentationLogic.ListChallenges(businessLogic.Challenges);
             var option = presentationLogic.SelectChallenge();
             if (option == 0)
+            {
                 presentationLogic.Display('=', assembly, "Thank you for using");
+                presentationLogic.Exit();
+            }
 
             var tuple = businessLogic.Run(option);
             presentationLogic.Display(tuple);
 
             presentationLogic.Display('=', assembly, "Thank you for using");
-            Environment.Exit(0);
+            presentationLogic.Exit();
         }
     }
 }

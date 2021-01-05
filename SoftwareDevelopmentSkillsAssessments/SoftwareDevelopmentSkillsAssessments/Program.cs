@@ -4,45 +4,33 @@ namespace SoftwareDevelopmentSkillsAssessments
 {
     public static class Program
     {
+        static Program()
+        {
+            employee = new Employee();
+            coin = new Coin();
+        }
+
+
         public static void Main()
         {
-            var number = ExampleOne("123456");
-            var number2 = ExampleOneRefactored("123456");
-            Console.WriteLine(number);
-            Console.WriteLine(number2);
+            var employeeNumberOne = employee.ExampleOne("123456");
+            var employeeNumberTwo = employee.ExampleOneRefactored("123456");
+            Console.WriteLine(employeeNumberOne);
+            Console.WriteLine(employeeNumberTwo);
 
-            Console.ReadLine();
+            Console.Write("Enter the amount you want to change: ");
+            var origAmount = Convert.ToDouble(Console.ReadLine());
+            var toChange = origAmount;
+            var coins = new int[4];
+            coin.Change(origAmount, coins);
+            Console.WriteLine("The best way to change " + toChange + " cents is: ");
+            coin.Show(coins);
+
         }
 
         //
 
-        private static string ExampleOne(string employeeNumber)
-        {
-            if (employeeNumber.Length < 6)
-            {
-                if (employeeNumber.Length == 1)
-                    employeeNumber = "00000" + employeeNumber;
-                else if (employeeNumber.Length == 2)
-                    employeeNumber = "0000" + employeeNumber;
-                else if (employeeNumber.Length == 3)
-                    employeeNumber = "000" + employeeNumber;
-                else if (employeeNumber.Length == 4)
-                    employeeNumber = "00" + employeeNumber;
-                else if (employeeNumber.Length == 5)
-                    employeeNumber = "0" + employeeNumber;
-            }
-
-            return employeeNumber;
-        }
-
-        private static string ExampleOneRefactored(string employeeNumber)
-        {
-            var length = employeeNumber.Length;
-            if (length >= 6)
-                return employeeNumber;
-
-            var zeros = new string('0', 6 - length);
-            return $"{zeros}{employeeNumber}";
-        }
+        private static readonly Employee employee;
+        private static readonly Coin coin;
     }
 }
