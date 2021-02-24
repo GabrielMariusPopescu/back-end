@@ -1,0 +1,15 @@
+WEATHER APP TASKS
+=================
+
+x display weather forecast for the next 5 days in Belfast
+x authenticated application. Use out of the box authentication
+x only authorized user will access weather forecast
+x communicate with a REST API and retrieve the next 5 days of weather for Belfast
+x create a list for each of these 5 days. The list will contain:
+	1. date
+	2. weather state
+	3. image representing the weather state
+
+x app will include ability to pull to refresh, 
+which will update the latest forecast 
+which will update the list

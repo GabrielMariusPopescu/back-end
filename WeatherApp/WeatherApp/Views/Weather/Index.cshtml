@@ -1,0 +1,26 @@
+﻿@model IEnumerable<WeatherApp.ViewModels.WeatherViewModel>
+
+@{
+    ViewData["Title"] = "Weather";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>@ViewData["Title"] for the next 5 days in Belfast</h1>
+<br />
+<div class="card-deck">
+    @foreach (var item in Model)
+    {
+        <div class="card">
+            <img src="@item.Image" class="card-img-top" alt="weather condition">
+            <div class="card-body">
+                <h5 class="card-title">@item.Day.ToString("D")</h5>
+                <p class="card-text">Min Temp <strong>@item.MinTemp.ToString("####") C</strong> <br /> Max Temp <strong>@item.MaxTemp.ToString("####") C</strong></p>
+                <p class="card-text"><lead class="text-muted">@item.State</lead></p>
+                <p class="card-text"><small class="text-muted">Wind Direction @item.WindDirection</small></p>
+            </div>
+        </div>
+    }
+</div>
+<br />
+
+<input type="submit" class="btn btn-primary btn-block btn-lg" onclick="location.href='@Url.Action("Index", "Weather")'" value="Refresh" />
